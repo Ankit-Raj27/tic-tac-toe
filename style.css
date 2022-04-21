@@ -72,7 +72,46 @@ nav ul{
     font-family:  'Baloo Bhaina 2', cursive;
 }
 
-.imgbox
+.imgbox img
 {
-    display: none;
+    width: 0;
+    transition: width 1s ease-in-out ;
 }
+
+#reset
+{
+    margin: 0 20px;
+    padding: 3px 20px;
+    background: #ffeeff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "baloo bhaina 2";
+    font-size: 16px;
+}
+#reset:hover {
+    background-color: #d886d3;
+    color: white;
+  }
+  .info
+  {
+      font-size: 25px;
+  }
+
+  @media (max-width : 800px){
+      .gameContainer
+      {
+          flex-wrap: wrap;
+
+      }
+      .infoContainer{
+        margin-top: 40px;
+      }
+      .infoContainer h1{
+        font-size: 2.5rem;
+      }
+      .gridContainer
+      {
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+      }
+  }
