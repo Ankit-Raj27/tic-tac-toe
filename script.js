@@ -30,10 +30,12 @@ const checkWin = ()=>
     wins.forEach(e =>{
         if(boxtext[e[0]].innerText===boxtext[e[1]].innerText && (boxtext[e[2]].innerText ===boxtext[e[1]].innerText) && (boxtext[e[1]].innerText !==""))
         {
-            document.querySelector(".info").innerText=boxtext[e[0]].innerText + " has WON!! but the real winner is ANKIT";
+            document.querySelector(".info").innerText=boxtext[e[0]].innerText + " has WON!! ";
             isgameover = true;
+            gameover.play();
             document.querySelector(".imgbox").getElementsByTagName("img")[0].style.width = "200px";
         }
+        
     });
 }
 
@@ -68,3 +70,4 @@ Array.from(boxes).forEach(element =>
         document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
         document.querySelector(".imgbox").getElementsByTagName("img")[0].style.width = "0px";
     })
+
