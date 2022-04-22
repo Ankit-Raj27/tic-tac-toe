@@ -2,14 +2,14 @@ console.log("Welcome to My TicTacToe!");
 
 let ting = new Audio("ting.mp3");
 let gameover = new Audio("gameover.mp3");
-let turn = "X";
+let turn = "❌";
 let isgameover = false;
 
 // Function to change the player's turn
 
 const changeTurn = () =>
 {
-    return turn ==="X"?"O": "X";
+    return turn ==="❌"?"⭕": "❌";
 }
 
 
@@ -65,7 +65,7 @@ Array.from(boxes).forEach(element =>
         Array.from(boxtexts).forEach(element =>{
             element.innerText = ""
         })
-        turn = "X"
+        turn = "❌"
         isgameover = false;
         document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
         document.querySelector(".imgbox").getElementsByTagName("img")[0].style.width = "0px";
